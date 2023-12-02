@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Detail = ({ detail }) => {
 
     const { id, image, name, brand_name, type, price, rating, details_button, update_button } = detail;
-    console.log(id);
 
     return (
         <div>
@@ -32,68 +31,68 @@ const Detail = ({ detail }) => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-20 mx-auto'>
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={image} />
+            <div className='grid grid-cols-2 gap-20 mx-48 my-20'>
+                <div className="card shadow-2xl bg-violet-100">
+                    <figure className="px-10 pt-10 ">
+                        <img className='rounded-2xl' src={image} />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">{name}</h2>
-                        <p>{brand_name}</p>
-                        <p>{type}</p>
-                        <p>{price}</p>
-                        <p>{rating}</p>
+                        <h2 className="card-title font-bold">Name: {name}</h2>
+                        <p className='text-base font-semibold'>Brand Name: {brand_name}</p>
+                        <p className='text-base font-semibold'>Type: {type}</p>
+                        <p className='text-base font-semibold'>Price: {price}</p>
+                        <p className='text-base font-semibold'>Rating: {rating}</p>
                         <div className="card-actions">
-                            <Link to={`/carDetail/${id}`}><button className="btn btn-primary">{details_button}</button></Link>
-                            <button className="btn btn-primary">{update_button}</button>
+                            <Link to={`/carDetail/${id}`}><button className="btn  font-bold bg-violet-400 border-0">{details_button}</button></Link>
+                            <Link to={'/updateCar'}><button className="btn  font-bold bg-violet-400 border-0">{update_button}</button></Link>
                         </div>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={image} />
+                <div className="card shadow-2xl bg-violet-100">
+                    <figure className="px-10 pt-10 ">
+                        <img className='rounded-2xl' src={image} />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">{name}</h2>
-                        <p>{brand_name}</p>
-                        <p>{type}</p>
-                        <p>{price}</p>
-                        <p>{rating}</p>
+                        <h2 className="card-title font-bold">Name: {name}</h2>
+                        <p className='text-base font-semibold'>Brand Name: {brand_name}</p>
+                        <p className='text-base font-semibold'>Type: {type}</p>
+                        <p className='text-base font-semibold'>Price: {price}</p>
+                        <p className='text-base font-semibold'>Rating: {rating}</p>
                         <div className="card-actions">
-                        <Link to={`/carDetail/${id}`}><button className="btn btn-primary">{details_button}</button></Link>
-                            <button className="btn btn-primary">{update_button}</button>
+                            <Link to={`/carDetail/${id}`}><button className="btn  font-bold bg-violet-400 border-0">{details_button}</button></Link>
+                            <Link to={'/updateCar'}><button className="btn  font-bold bg-violet-400 border-0">{update_button}</button></Link>
                         </div>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={image} />
+                <div className="card shadow-2xl bg-violet-100">
+                    <figure className="px-10 pt-10 ">
+                        <img className='rounded-2xl' src={image} />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">{name}</h2>
-                        <p>{brand_name}</p>
-                        <p>{type}</p>
-                        <p>{price}</p>
-                        <p>{rating}</p>
+                        <h2 className="card-title font-bold">Name: {name}</h2>
+                        <p className='text-base font-semibold'>Brand Name: {brand_name}</p>
+                        <p className='text-base font-semibold'>Type: {type}</p>
+                        <p className='text-base font-semibold'>Price: {price}</p>
+                        <p className='text-base font-semibold'>Rating: {rating}</p>
                         <div className="card-actions">
-                        <Link to={`/carDetail/${id}`}><button className="btn btn-primary">{details_button}</button></Link>
-                            <button className="btn btn-primary">{update_button}</button>
+                            <Link to={`/carDetail/${id}`}><button className="btn  font-bold bg-violet-400 border-0">{details_button}</button></Link>
+                            <Link to={'/updateCar'}><button className="btn  font-bold bg-violet-400 border-0">{update_button}</button></Link>
                         </div>
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={image} />
+                <div className="card shadow-2xl bg-violet-100">
+                    <figure className="px-10 pt-10 ">
+                        <img className='rounded-2xl' src={image} />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">{name}</h2>
-                        <p>{brand_name}</p>
-                        <p>{type}</p>
-                        <p>{price}</p>
-                        <p>{rating}</p>
+                        <h2 className="card-title font-bold">Name: {name}</h2>
+                        <p className='text-base font-semibold'>Brand Name: {brand_name}</p>
+                        <p className='text-base font-semibold'>Type: {type}</p>
+                        <p className='text-base font-semibold'>Price: {price}</p>
+                        <p className='text-base font-semibold'>Rating: {rating}</p>
                         <div className="card-actions">
-                        <Link to={`/carDetail/${id}`}><button className="btn btn-primary">{details_button}</button></Link>
-                            <button className="btn btn-primary">{update_button}</button>
+                            <Link to={`/carDetail/${id}`}><button className="btn  font-bold bg-violet-400 border-0">{details_button}</button></Link>
+                            <Link to={'/updateCar'}><button className="btn  font-bold bg-violet-400 border-0">{update_button}</button></Link>
                         </div>
                     </div>
                 </div>

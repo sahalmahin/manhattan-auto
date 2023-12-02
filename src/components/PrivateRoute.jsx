@@ -11,11 +11,9 @@ const PrivateRoute = ({ children }) => {
     if (loading) {
         return <div className="text-center my-52"><span className="loading loading-lg loading-spinner text-secondary"></span></div>
     }
-
     if (user) {
         return children;
     }
-
     return <Navigate state={location.pathname} to='/login'></Navigate>
 };
 

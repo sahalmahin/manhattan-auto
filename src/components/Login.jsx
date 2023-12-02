@@ -15,7 +15,6 @@ const Login = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password, 'login successfully');
         e.target.reset();
 
         setLoggingIn(true);
@@ -38,10 +37,10 @@ const Login = () => {
 
 
     return (
-        <div className="w-[600px] h-[500px] mx-auto  bg-violet-200">
+        <div className="w-[600px] h-[500px] mx-auto my-8 bg-violet-100 rounded-3xl">
             <div className="hero-content flex-col">
-                <div className=" w-full lg:text-left border-b-2 border-gray-200">
-                    <h1 className="text-2xl font-bold text-center py-10">Login Your Account!</h1>
+                <div className=" w-full lg:text-left">
+                    <h1 className="text-2xl font-bold text-center pt-6">Login Your Account!</h1>
                 </div>
                 <div className="card w-full max-w-sm ">
                     <form onSubmit={handleLogin} className="card-body">

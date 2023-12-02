@@ -17,7 +17,6 @@ const UpdateCar = () => {
         const photo = form.photo.value;
         const rating = form.rating.value;
         const updatedCar = { name, brand, type, price, photo, rating };
-        console.log(updatedCar);
 
         fetch(`http://localhost:5000/car/${_id}`, {
             method: 'PUT',

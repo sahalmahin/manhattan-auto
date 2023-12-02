@@ -13,7 +13,6 @@ const AddProduct = () => {
         const rating = form.rating.value;
         const description = form.description.value;
         const newCar = { name, brand, type, price, photo, rating, description };
-        console.log(newCar);
 
         fetch('http://localhost:5000/car', {
             method: 'POST',
@@ -24,7 +23,6 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if(data.insertedId){
                     Swal.fire({
                         title: 'Success!',
@@ -37,10 +35,9 @@ const AddProduct = () => {
     }
 
     return (
-        <div className="bg-gray-200 p-24">
-            <h2 className="text-center my-8 text-3xl font-extrabold">Please Add Your Car!</h2>
+        <div className="w-[1100px] h-[500px] mx-auto bg-violet-100 px-24 rounded-3xl">
+            <h2 className="text-center my-8 text-3xl font-extrabold pt-6">Please Add Your Car!</h2>
             <form onSubmit={handleAddCar}>
-                {/* form Name and Quantity Row */}
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Car :</p>
@@ -51,7 +48,6 @@ const AddProduct = () => {
                         <input className="input input-bordered join-item w-3/4" type="text" placeholder="Brand Name" name="brand" />
                     </div>
                 </div>
-                {/* form Supplier Row */}
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Type :</p>
@@ -62,7 +58,6 @@ const AddProduct = () => {
                         <input className="input input-bordered join-item w-3/4" type="text" placeholder="Price" name="price" />
                     </div>
                 </div>
-                {/* form Category & Details Row */}
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Photo Url :</p>
@@ -73,14 +68,13 @@ const AddProduct = () => {
                         <input className="input input-bordered join-item w-3/4" type="text" placeholder="Rating" name="rating" />
                     </div>
                 </div>
-                {/* form Photo Row */}
                 <div className="mb-8">
                     <div className="join w-full">
                         <p className="w-1/4 my-auto font-bold text-xl">Description :</p>
                         <input className="input input-bordered join-item  w-full" type="text" placeholder="Description" name="description" />
                     </div>
                 </div>
-                <input type="submit" value='Add Car' className="btn btn-block bg-slate-400 font-bold text-xl " />
+                <input type="submit" value='ADD CAR' className="btn btn-block bg-violet-400 font-bold text-xl " />
             </form>
         </div>
     );

@@ -5,13 +5,11 @@ import { useState } from 'react';
 
 const MyCart = () => {
 
-
     const loadedCars = useLoaderData();
     const [cars, setCars] = useState(loadedCars);
 
-
     return (
-        <div className="grid grid-cols-3 gap-8 mx-16 my-60">
+        <div className="grid grid-cols-3 gap-8 mx-16 mt-16">
             {
                 cars.map(car => <Cart
                     key={car._id}
