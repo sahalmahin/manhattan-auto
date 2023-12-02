@@ -34,8 +34,6 @@ const Navbar = () => {
                     <a className="btn font-bold">Login</a>
                 </div>
             </div>
-            {/* <Banner></Banner>
-            <Footer></Footer> */}
         </div>
     );
 };
