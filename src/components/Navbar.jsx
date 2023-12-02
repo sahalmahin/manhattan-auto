@@ -1,7 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
-    // logo, Home, Add Product, My Cart, and Login.
+
+    const { user, logOut, googleSignIn } = useContext(AuthContext);
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
+    const handleSignOut = () => {
+        logOut()
+            .then(console.log('log out successfully'))
+            .catch(error => console.error(error))
+    }
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -31,10 +50,32 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn font-bold">Login</a>
+                        {
+                            user ?
+                                <>
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                        <div className=" rounded-full">
+                                            <img alt="Tailwind CSS Navbar component" src='https://rb.gy/cwptut' />
+                                        </div>
+                                    </label>
+                                    <button className="btn rounded-xl font-semibold text-white bg-violet-500 px-6" onClick={handleSignOut}>Sign Out</button>
+                                </>
+                                :
+                                <>
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                        <div className=" rounded-full border border-gray-400">
+                                            <img alt="Tailwind CSS Navbar component" src='../../public/image_9653926.png' />
+                                        </div>
+                                    </label>
+                                    <Link to='/login'><button className="btn rounded-xl text-white bg-violet-500">Login</button></Link>
+                                </>
+                        }
+                        <div className="">
+                            <button onClick={handleGoogleSignIn} className="btn btn-outline">Sign in with Google</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     );
 };
 

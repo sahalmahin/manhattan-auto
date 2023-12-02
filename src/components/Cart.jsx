@@ -47,7 +47,7 @@ const Cart = ({ car, cars, setCars }) => {
                 <div className="card-actions items-center justify-center">
                     <p className='font-extrabold'>Want to Delete ? Click This Button!</p>
                     <button onClick={() => handleDelete(_id)} className="btn bg-red-600 text-white ">Delete</button>
-                    <Link to={`/updateCar/${_id}`}><button className="btn bg-orange-600 text-white ">Update</button></Link>
+                    <Link to={`/updateCar/${_id}`}><button className="btn bg-orange-600 text-white "></button></Link>
                 </div>
             </div>
         </div>

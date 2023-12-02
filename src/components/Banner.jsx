@@ -59,7 +59,6 @@ const Banner = () => {
                 <div className="shadow-2xl p-10 rounded-full">
                     <p className=" text-gray-700 text-lg font-bold">Branded Merchandise Store: Sell branded merchandise such as clothing, accessories, or collectibles related to your automotive brand, allowing customers to take a piece of your brand home with them.</p>
                 </div>
-
             </section>
         </div>
     );
