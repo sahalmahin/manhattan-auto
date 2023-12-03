@@ -5,9 +5,6 @@ Welcome to our client-side documentation for the Automotive Project! This docume
 
 Introduction
 Our Automotive Project is designed to revolutionize the way users interact with automotive data and services. The client-side application plays a crucial role in delivering a user-friendly interface and seamless communication with the backend.
-
-Introduction
-Our Automotive Project is designed to revolutionize the way users interact with automotive data and services. The client-side application plays a crucial role in delivering a user-friendly interface and seamless communication with the backend.
 	
 	• User-friendly Dashboard
 	• Maintanance Reminders
