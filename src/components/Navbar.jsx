@@ -66,7 +66,7 @@ const Navbar = () => {
                             <>
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                     <div className=" rounded-full border border-gray-400">
-                                        <img alt="" src='../../images/user.png' />
+                                        <img alt="" src='https://i.postimg.cc/nVqxVd0Y/user.png' />
                                     </div>
                                 </label>
                                 <Link to='/login'><button className="btn btn-outline bg-white ml-1">Login</button></Link>
