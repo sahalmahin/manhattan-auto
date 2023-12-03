@@ -1,8 +1,14 @@
-# React + Vite
+<h3 align="center">Client-Side README for Automotive Project</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview
+Welcome to our client-side documentation for the Automotive Project! This document provides key information about the client-side aspects of our project, aimed at ensuring a smooth and efficient user experience.
 
-Currently, two official plugins are available:
+Introduction
+Our Automotive Project is designed to revolutionize the way users interact with automotive data and services. The client-side application plays a crucial role in delivering a user-friendly interface and seamless communication with the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+	
+	• User-friendly Dashboard
+	• Maintanance Reminders
+	• Fuel Effeciency Analysis
+	• Security Features
+	• Customizable Alerts
