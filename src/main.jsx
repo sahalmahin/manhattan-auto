@@ -17,11 +17,13 @@ import MyCart from './components/MyCart';
 import Register from './components/Register';
 import AuthProvider from './components/AuthProvider';
 import PrivateRoute from './components/PrivateRoute';
+// import Error from './components/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    // errorElement: <Error></Error>,
     children: [
       {
         path: '/',

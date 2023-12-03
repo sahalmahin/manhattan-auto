@@ -22,9 +22,7 @@ const Login = () => {
         signIn(email, password)
             .then((result) => {
                 console.log(result);
-
                 toast.success('Login successful');
-
                 setTimeout(() => {
                     navigate(location?.state ? location.state : '/');
                 }, 2000);

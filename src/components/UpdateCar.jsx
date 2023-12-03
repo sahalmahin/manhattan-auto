@@ -43,7 +43,6 @@ const UpdateCar = () => {
         <div className="bg-gray-200 p-24">
             <h2 className="text-center my-8 text-3xl font-extrabold">Update Car</h2>
             <form onSubmit={handleUpdateCar}>
-                {/* form Name and Quantity Row */}
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Car :</p>
@@ -54,7 +53,6 @@ const UpdateCar = () => {
                         <input className="input input-bordered join-item w-3/4" type="text" placeholder="Brand Name" name="brand" defaultValue={brand} />
                     </div>
                 </div>
-                {/* form Supplier Row */}
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Type :</p>
@@ -65,7 +63,6 @@ const UpdateCar = () => {
                         <input className="input input-bordered join-item w-3/4" type="text" placeholder="Price" name="price" defaultValue={price} />
                     </div>
                 </div>
-                {/* form Category & Details Row */}
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Photo Url :</p>
@@ -76,7 +73,6 @@ const UpdateCar = () => {
                         <input className="input input-bordered join-item w-3/4" type="text" placeholder="Rating" name="rating" defaultValue={rating} />
                     </div>
                 </div>
-                {/* form Photo Row */}
                 <input type="submit" value='Update Car' className="btn btn-block bg-slate-400 font-bold text-xl " />
             </form>
         </div>
