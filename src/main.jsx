@@ -38,7 +38,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/carDetail/:id',
-        element: <PrivateRoute><CarDetail></CarDetail></PrivateRoute>
+        element: <PrivateRoute><CarDetail></CarDetail></PrivateRoute>,
+        loader: () => fetch('http://localhost:5173/carDetail')
       },
       {
         path: '/updateCar',

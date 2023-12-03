@@ -56,3 +56,10 @@ export default AuthProvider;
 AuthProvider.propTypes = {
     children: PropTypes.node
 }
+
+// VITE_APIKEY=AIzaSyDTuukaxfBlRrL4cMMP-TGBkFhsn_YSWGM
+// VITE_AUTHDOMAIN=manhattan-auto.firebaseapp.com
+// VITE_PROJECTID=manhattan-auto
+// VITE_STORAGEBUCKET=manhattan-auto.appspot.com
+// VITE_MESSAGINGSENDERID=981939040946
+// VITE_APPID=1:981939040946:web:6be1a0cea9b071ffa04fab

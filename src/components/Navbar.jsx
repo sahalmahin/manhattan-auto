@@ -53,11 +53,14 @@ const Navbar = () => {
                     {
                         user ?
                             <>
-                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className=" rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src='https://rb.gy/cwptut' />
+                                <div className="flex items-center justify-center">
+                                    <div>
+                                        <p className="font-bold border p-1 rounded-lg">{user.email}</p>
                                     </div>
-                                </label>
+                                    <div>
+                                        <img className="rounded-full w-12 h-12 ml-1" alt="" src='https://rb.gy/cwptut' />
+                                    </div>
+                                </div>
                                 <button className="btn btn-outline bg-white ml-1" onClick={handleSignOut}>Sign Out</button>
                             </>
                             :
