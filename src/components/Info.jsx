@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 const Info = ({ info }) => {
 
-    const { owners, founded_date, headquarters, employees, motto, image } = info;
+    const { id, owners, founded_date, headquarters, employees, motto, image } = info;
 
     const handleAddCar = () => {
-        fetch('http://localhost:5173/carDetail/:id', {
+        fetch(`http://localhost:5000/carDetail/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

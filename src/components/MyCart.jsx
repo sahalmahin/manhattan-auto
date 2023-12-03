@@ -9,7 +9,7 @@ const MyCart = () => {
     const [cars, setCars] = useState(loadedCars);
 
     return (
-        <div className="grid grid-cols-3 gap-8 mx-16 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mx-4 sm:mx-8 md:mx-16 lg:mx-16 xl:mx-16 mt-8">
             {
                 cars.map(car => <Cart
                     key={car._id}

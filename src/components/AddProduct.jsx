@@ -23,19 +23,19 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.insertedId){
+                if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Car added successfully',
                         icon: 'success',
                         confirmButtonText: 'Go Ahead'
-                      })
+                    })
                 }
             })
     }
 
     return (
-        <div className="w-[1100px] h-[500px] mx-auto bg-violet-100 px-24 rounded-3xl">
+        <div className="w-full sm:w-full md:w-full lg:w-full xl:w-2/3 mx-auto bg-violet-100 px-4 md:px-8 lg:px-8 xl:px-8 rounded-3xl">
             <h2 className="text-center my-8 text-3xl font-extrabold pt-6">Please Add Your Car!</h2>
             <form onSubmit={handleAddCar}>
                 <div className="md:flex mb-8 gap-5">

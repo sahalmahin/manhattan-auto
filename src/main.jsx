@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/carDetail/:id',
         element: <PrivateRoute><CarDetail></CarDetail></PrivateRoute>,
-        loader: () => fetch('http://localhost:5173/carDetail')
+        loader: ({params}) => fetch(`http://localhost:5000/carDetail/${params.id}`)
       },
       {
         path: '/updateCar',
