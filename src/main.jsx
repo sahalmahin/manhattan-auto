@@ -11,12 +11,13 @@ import Login from './components/Login';
 import Root from './components/Root';
 import AddProduct from './components/AddProduct';
 import DetailPage from './components/DetailPage';
-import CarDetail from './components/CarDetail';
 import UpdateCar from './components/UpdateCar';
 import MyCart from './components/MyCart';
 import Register from './components/Register';
 import AuthProvider from './components/AuthProvider';
 import PrivateRoute from './components/PrivateRoute';
+import Brand from './components/Brand';
+import SingleCar from './components/SingleCar';
 // import Error from './components/Error';
 
 const router = createBrowserRouter([
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/car')
       },
       {
         path: '/myCart',
@@ -35,13 +37,18 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/car')
       },
       {
-        path: '/detailPage/:id',
-        element: <DetailPage></DetailPage>
+        path: '/brand/:id',
+        element: <Brand></Brand>,
+        loader: () => fetch('http://localhost:5000/car')
       },
       {
-        path: '/carDetail/:id',
-        element: <PrivateRoute><CarDetail></CarDetail></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/carDetail/${params.id}`)
+        path: '/singleCar/:id',
+        element: <SingleCar></SingleCar>,
+        loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
+      },
+      {
+        path: '/detailPage/:id',
+        element: <DetailPage></DetailPage>
       },
       {
         path: '/updateCar',

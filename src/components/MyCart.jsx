@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Cart from './Cart';
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
@@ -11,8 +10,8 @@ const MyCart = () => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mx-4 sm:mx-8 md:mx-16 lg:mx-16 xl:mx-16 mt-8">
             {
-                cars.map(car => <Cart
-                    key={car._id}
+                cars.map((car,index) => <Cart
+                    key={index}
                     car={car}
                     cars={cars}
                     setCars={setCars}
@@ -23,9 +22,3 @@ const MyCart = () => {
 };
 
 export default MyCart;
-
-MyCart.propTypes = {
-    car: PropTypes.object,
-    cars: PropTypes.array,
-    setCars: PropTypes.func
-}

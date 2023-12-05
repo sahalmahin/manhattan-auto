@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Cart = ({ car, cars, setCars }) => {
@@ -38,7 +37,7 @@ const Cart = ({ car, cars, setCars }) => {
 
     return (
         <div className="card  bg-violet-300 shadow-xl mb-8">
-            <figure><img src={photo} className='w-full h-[200px]' alt="Movie" /></figure>
+            <figure><img src={photo} className='w-full h-[200px]' alt="car" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-semibold">
                     Name: {name} <br />
@@ -52,7 +51,6 @@ const Cart = ({ car, cars, setCars }) => {
                     <p className='font-extrabold'>Want to Delete ? Click This Button!</p>
                     <div className='flex items-center justify-center mx-auto  gap-6'>
                         <button onClick={() => handleDelete(_id)} className="btn border-0 bg-slate-600 text-white ">Delete</button>
-                        <Link to={`/updateCar/${_id}`}><button className="btn border-0 bg-slate-600 text-white ">Update</button></Link>
                     </div>
                 </div>
             </div>
