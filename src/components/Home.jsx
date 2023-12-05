@@ -35,7 +35,7 @@ const Home = () => {
                 </div>
                 <div className="shadow-2xl p-6 sm:p-10 rounded-2xl">
                     <h3 className="text-4xl sm:text-6xl font-medium leading-tight">We provide <br /> premium car with <br /> high quality</h3>
-                    <p className="text-lg sm:text-xl text-violet-700 my-4 font-semibold">CERTIFICATED BY GURUS</p>
+                    <p className="text-lg sm:text-xl text-violet-700 my-4 font-semibold">CERTIFIED BY GURUS</p>
                     <p className="text-base sm:text-lg text-gray-700 font-semibold">Our company was built by trust and reputation. <br /> We know how to make our customers love us by <br /> our high quality products with affordable prices.<br />We promise to make you have the interesting experiences.</p>
                 </div>
             </section>
