@@ -22,7 +22,6 @@ const SingleCar = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
-                    console.log(data);
                 }
             })
     };

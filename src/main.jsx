@@ -10,7 +10,6 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Root from './components/Root';
 import AddProduct from './components/AddProduct';
-import DetailPage from './components/DetailPage';
 import UpdateCar from './components/UpdateCar';
 import MyCart from './components/MyCart';
 import Register from './components/Register';
@@ -45,10 +44,6 @@ const router = createBrowserRouter([
         path: '/singleCar/:id',
         element: <SingleCar></SingleCar>,
         loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
-      },
-      {
-        path: '/detailPage/:id',
-        element: <DetailPage></DetailPage>
       },
       {
         path: '/updateCar',
