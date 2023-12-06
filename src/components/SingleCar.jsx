@@ -6,7 +6,7 @@ const SingleCar = () => {
     const carId = useLoaderData();
 
     const handleAddCar = () => {
-        fetch(`http://localhost:5000/carDetail/${carId._id}`, {
+        fetch(`http://localhost:5000/carDetail/${[carId._id]}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

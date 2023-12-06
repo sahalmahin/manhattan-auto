@@ -17,13 +17,13 @@ import AuthProvider from './components/AuthProvider';
 import PrivateRoute from './components/PrivateRoute';
 import Brand from './components/Brand';
 import SingleCar from './components/SingleCar';
-// import Error from './components/Error';
+import Error from './components/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement: <Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/singleCar/:id',
-        element: <SingleCar></SingleCar>,
+        element: <PrivateRoute><SingleCar></SingleCar></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
       },
       {
