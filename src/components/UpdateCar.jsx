@@ -18,7 +18,7 @@ const UpdateCar = () => {
         const rating = form.rating.value;
         const updatedCar = { name, brand, type, price, photo, rating };
 
-        fetch(`http://localhost:5000/car/${_id}`, {
+        fetch(`https://outrageous-ruby-galoshes.cyclic.app/car/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

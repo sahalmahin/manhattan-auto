@@ -5,8 +5,9 @@ const SingleCar = () => {
 
     const carId = useLoaderData();
 
+
     const handleAddCar = () => {
-        fetch(`http://localhost:5000/carDetail/${[carId._id]}`, {
+        fetch(`https://outrageous-ruby-galoshes.cyclic.app/carDetail/${carId._id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,6 +23,7 @@ const SingleCar = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    console.log(data);
                 }
             })
     };

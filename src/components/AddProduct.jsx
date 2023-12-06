@@ -14,7 +14,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const newCar = { name, brand, type, price, photo, rating, description };
 
-        fetch('http://localhost:5000/car', {
+        fetch('https://outrageous-ruby-galoshes.cyclic.app/car', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

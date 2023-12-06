@@ -16,7 +16,7 @@ const Cart = ({ car, cars, setCars }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/car/${_id}`, {
+                fetch(`https://outrageous-ruby-galoshes.cyclic.app/car/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -28,32 +28,32 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/car')
+        loader: () => fetch('https://outrageous-ruby-galoshes.cyclic.app/car')
       },
       {
         path: '/myCart',
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/car')
+        loader: () => fetch('https://outrageous-ruby-galoshes.cyclic.app/car')
       },
       {
         path: '/brand/:id',
         element: <Brand></Brand>,
-        loader: () => fetch('http://localhost:5000/car')
+        loader: () => fetch('https://outrageous-ruby-galoshes.cyclic.app/car')
       },
       {
         path: '/singleCar/:id',
         element: <PrivateRoute><SingleCar></SingleCar></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
+        loader: ({ params }) => fetch(`https://outrageous-ruby-galoshes.cyclic.app/car/${params.id}`)
       },
       {
         path: '/updateCar',
         element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/car')
+        loader: () => fetch('https://outrageous-ruby-galoshes.cyclic.app/car')
       },
       {
         path: '/updateCar/:id',
         element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
+        loader: ({ params }) => fetch(`https://outrageous-ruby-galoshes.cyclic.app/car/${params.id}`)
       },
       {
         path: '/login',

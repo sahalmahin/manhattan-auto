@@ -5,6 +5,7 @@ import BannerCar from "./BannerCar";
 const Home = () => {
 
     const brand = useLoaderData();
+    console.log(brand);
 
     return (
         <div>

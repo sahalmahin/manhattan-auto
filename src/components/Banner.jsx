@@ -6,7 +6,7 @@ const Banner = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/car')
+        fetch('https://outrageous-ruby-galoshes.cyclic.app/car')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])
