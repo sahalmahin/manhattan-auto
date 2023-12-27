@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 const CarData = ({carData}) => {
 
     const { name, type, price, brand, photo, rating } = carData;
-    
 
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url(${photo})` }}>

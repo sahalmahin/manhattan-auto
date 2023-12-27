@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 const BannerCar = ({ cars }) => {
 
-    const { _id, brand, photo } = cars;
+    const { _id, brand_name, image } = cars;
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img className='w-full h-[200px]' src={photo} alt="car" /></figure>
+            <figure><img className='w-full h-[200px]' src={image} alt="car" /></figure>
             <div className="card-body">
                 <h2 className="card-title">
                     <div className="card-actions mx-auto">
                         <Link to={`/brand/${_id}`}>
-                            <button className='btn font-bold text-lg'>{brand}</button>
+                            <button className='btn font-bold text-lg'>{brand_name}</button>
                         </Link>
                     </div>
                 </h2>

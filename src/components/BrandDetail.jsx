@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 const BrandDetail = ({ brands }) => {
 
-    const { _id, name, type, price, brand, photo, rating } = brands;
+    const { _id, name, type, price, brand_name, image, rating } = brands;
 
     return (
         <div className="card shadow-2xl bg-violet-100">
             <figure className="px-10 pt-10 ">
-                <img className='rounded-2xl w-full h-[200px]' src={photo} />
+                <img className='rounded-2xl w-full h-[200px]' src={image} />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title font-bold">Name: {name}</h2>
-                <p className='text-base font-semibold'>Brand Name: {brand}</p>
+                <p className='text-base font-semibold'>Brand Name: {brand_name}</p>
                 <p className='text-base font-semibold'>Type: {type}</p>
                 <p className='text-base font-semibold'>Price: {price}</p>
                 <p className='text-base font-semibold'>Rating: {rating}</p>

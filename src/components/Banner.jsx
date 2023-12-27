@@ -6,7 +6,7 @@ const Banner = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('https://outrageous-ruby-galoshes.cyclic.app/car')
+        fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car')
             .then(res => res.json())
             .then(data => setCars(data))
     }, [])

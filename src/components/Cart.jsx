@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 
 const Cart = ({ car, cars, setCars }) => {
 
-    const { _id, name, brand, type, price, photo, rating } = car;
+    const { _id, name, brand_name, type, price, image, rating } = car;
 
     const handleDelete = _id => {
         Swal.fire({
@@ -16,7 +16,7 @@ const Cart = ({ car, cars, setCars }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://outrageous-ruby-galoshes.cyclic.app/car/${_id}`, {
+                fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -37,13 +37,13 @@ const Cart = ({ car, cars, setCars }) => {
 
     return (
         <div className="card  bg-violet-300 shadow-xl mb-8">
-            <figure><img src={photo} className='w-full h-[200px]' alt="car" /></figure>
+            <figure><img src={image} className='w-full h-[200px]' alt="car" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-semibold">
                     Name: {name} <br />
                     Type: {type} <br />
                     Price: {price} <br />
-                    Brand: {brand} <br />
+                    Brand: {brand_name} <br />
                     Rating: {rating}
                 </h2>
                 <p className='text-sm font-medium text-gray-600'>Congratulations on your new car! 🚗✨ Wishing you countless miles of joy, adventure, and unforgettable moments on the road. May your journey be smooth and filled with wonderful memories. Happy driving! 🎉👏 #NewCarJoy</p>

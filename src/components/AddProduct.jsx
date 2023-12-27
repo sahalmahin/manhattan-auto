@@ -9,12 +9,12 @@ const AddProduct = () => {
         const brand = form.brand.value;
         const type = form.type.value;
         const price = form.price.value;
-        const photo = form.photo.value;
+        const image = form.image.value;
         const rating = form.rating.value;
         const description = form.description.value;
-        const newCar = { name, brand, type, price, photo, rating, description };
+        const newCar = { name, brand, type, price, image, rating, description };
 
-        fetch('https://outrageous-ruby-galoshes.cyclic.app/car', {
+        fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -61,7 +61,7 @@ const AddProduct = () => {
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Photo Url :</p>
-                        <input className="input input-bordered join-item w-3/4" type="text" placeholder="Url" name="photo" />
+                        <input className="input input-bordered join-item w-3/4" type="text" placeholder="Url" name="image" />
                     </div>
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Rating :</p>

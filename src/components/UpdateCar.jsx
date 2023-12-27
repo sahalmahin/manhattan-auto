@@ -5,20 +5,20 @@ const UpdateCar = () => {
 
     const car = useLoaderData();
 
-    const { _id, name, brand, type, price, photo, rating } = car;
+    const { _id, name, brand_name, type, price, image, rating } = car;
 
     const handleUpdateCar = e => {
         e.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const brand = form.brand.value;
+        const brand_name = form.brand_name.value;
         const type = form.type.value;
         const price = form.price.value;
         const photo = form.photo.value;
         const rating = form.rating.value;
-        const updatedCar = { name, brand, type, price, photo, rating };
+        const updatedCar = { name, brand_name, type, price, photo, rating };
 
-        fetch(`https://outrageous-ruby-galoshes.cyclic.app/car/${_id}`, {
+        fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +31,7 @@ const UpdateCar = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Car added successfully',
+                        text: 'Car updated successfully',
                         icon: 'success',
                         confirmButtonText: 'Go Ahead'
                     })
@@ -50,7 +50,7 @@ const UpdateCar = () => {
                     </div>
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Brand :</p>
-                        <input className="input input-bordered join-item w-3/4" type="text" placeholder="Brand Name" name="brand" defaultValue={brand} />
+                        <input className="input input-bordered join-item w-3/4" type="text" placeholder="Brand Name" name="brand_name" defaultValue={brand_name} />
                     </div>
                 </div>
                 <div className="md:flex mb-8 gap-5">
@@ -66,7 +66,7 @@ const UpdateCar = () => {
                 <div className="md:flex mb-8 gap-5">
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Photo Url :</p>
-                        <input className="input input-bordered join-item w-3/4" type="text" placeholder="Url" name="photo" defaultValue={photo} />
+                        <input className="input input-bordered join-item w-3/4" type="text" placeholder="Url" name="photo" defaultValue={image} />
                     </div>
                     <div className="join md:w-1/2">
                         <p className="w-1/4 my-auto font-bold text-xl">Rating :</p>
