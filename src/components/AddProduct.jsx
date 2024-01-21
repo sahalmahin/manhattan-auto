@@ -2,8 +2,8 @@ import Swal from "sweetalert2";
 
 const AddProduct = () => {
 
-    const handleAddCar = e => {
-        e.preventDefault();
+    const handleAddCar = event => {
+        event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const brand = form.brand.value;
@@ -14,7 +14,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const newCar = { name, brand, type, price, image, rating, description };
 
-        fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car', {
+        fetch('https://reset-assignment-10-server.vercel.app/car', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

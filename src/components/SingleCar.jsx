@@ -10,7 +10,7 @@ const SingleCar = () => {
     const car = { brand_name, image, name, type, price, rating };
 
     const handleAddCar = () => {
-        fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/carDetail/${_id}`, {
+        fetch(`https://reset-assignment-10-server.vercel.app/car/${_id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

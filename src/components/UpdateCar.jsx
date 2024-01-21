@@ -18,7 +18,7 @@ const UpdateCar = () => {
         const rating = form.rating.value;
         const updatedCar = { name, brand_name, type, price, photo, rating };
 
-        fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car/${_id}`, {
+        fetch(`https://reset-assignment-10-server.vercel.app/car/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

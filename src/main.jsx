@@ -28,32 +28,32 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car')
+        loader: () => fetch('https://reset-assignment-10-server.vercel.app/car')
       },
       {
         path: '/myCart',
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car')
+        loader: () => fetch('https://reset-assignment-10-server.vercel.app/car')
       },
       {
         path: '/brand/:id',
         element: <Brand></Brand>,
-        loader: () => fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car')
+        loader: () => fetch('https://reset-assignment-10-server.vercel.app/car')
       },
       {
         path: '/singleCar/:id',
         element: <PrivateRoute><SingleCar></SingleCar></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car/${params.id}`)
+        loader: ({ params }) => fetch(`https://reset-assignment-10-server.vercel.app/car/${params.id}`)
       },
       {
         path: '/updateCar',
         element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-        loader: () => fetch('https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car')
+        loader: () => fetch('https://reset-assignment-10-server.vercel.app/car')
       },
       {
         path: '/updateCar/:id',
         element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car/${params.id}`)
+        loader: ({ params }) => fetch(`https://reset-assignment-10-server.vercel.app/car/${params.id}`)
       },
       {
         path: '/login',

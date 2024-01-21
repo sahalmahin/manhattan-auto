@@ -16,7 +16,7 @@ const Cart = ({ car, cars, setCars }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://reset-assignment-10-server-g5vf71x3o-sahal-mahins-projects.vercel.app/car/${_id}`, {
+                fetch(`https://reset-assignment-10-server.vercel.app/car/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
